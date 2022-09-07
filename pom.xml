@@ -6,10 +6,10 @@
     <parent>
         <groupId>com.github.sfg-beer-works</groupId>
         <artifactId>sfg-brewery-bom</artifactId>
-        <version>1.0.7</version>
+        <version>1.0.3</version>
     </parent>
 
-    <groupId>guru.springframework</groupId>
+
 
     <artifactId>mssc-beer-order-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
