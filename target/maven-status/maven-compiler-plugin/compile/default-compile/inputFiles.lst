@@ -1,10 +1,14 @@
 C:\Training\Microservices\mssc-beer-order-service\src\main\java\guru\sfg\beer\order\service\services\BeerOrderServiceImpl.java
+C:\Training\Microservices\mssc-beer-order-service\src\main\java\guru\sfg\beer\order\service\services\beer\BeerService.java
 C:\Training\Microservices\mssc-beer-order-service\src\main\java\guru\sfg\beer\order\service\repositories\CustomerRepository.java
 C:\Training\Microservices\mssc-beer-order-service\src\main\java\guru\sfg\beer\order\service\web\model\BeerOrderPagedList.java
+C:\Training\Microservices\mssc-beer-order-service\src\main\java\guru\sfg\beer\order\service\web\mappers\BeerOrderLineMapperDecorator.java
 C:\Training\Microservices\mssc-beer-order-service\src\main\java\guru\sfg\beer\order\service\web\model\BeerOrderDto.java
+C:\Training\Microservices\mssc-beer-order-service\src\main\java\guru\sfg\beer\order\service\services\beer\BeerServiceImpl.java
 C:\Training\Microservices\mssc-beer-order-service\src\main\java\guru\sfg\beer\order\service\web\controllers\BeerOrderController.java
 C:\Training\Microservices\mssc-beer-order-service\src\main\java\guru\sfg\beer\order\service\domain\BeerOrder.java
 C:\Training\Microservices\mssc-beer-order-service\src\main\java\guru\sfg\beer\order\service\web\mappers\BeerOrderLineMapper.java
+C:\Training\Microservices\mssc-beer-order-service\src\main\java\guru\sfg\beer\order\service\web\model\BeerDto.java
 C:\Training\Microservices\mssc-beer-order-service\src\main\java\guru\sfg\beer\order\service\web\model\OrderStatusEnum.java
 C:\Training\Microservices\mssc-beer-order-service\src\main\java\guru\sfg\beer\order\service\web\model\OrderStatusUpdate.java
 C:\Training\Microservices\mssc-beer-order-service\src\main\java\guru\sfg\beer\order\service\bootstrap\BeerOrderBootStrap.java
