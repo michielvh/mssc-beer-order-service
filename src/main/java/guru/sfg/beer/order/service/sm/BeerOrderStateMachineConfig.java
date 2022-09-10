@@ -16,8 +16,8 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class BeerOrderStateMachineConfig extends StateMachineConfigurerAdapter<BeerOrderStatusEnum, BeerOrderEventEnum> {
 
-    private final Action<BeerOrderStatusEnum, BeerOrderEventEnum> validateOrderAction;
-    private final Action<BeerOrderStatusEnum, BeerOrderEventEnum>  allocateOrderRequest;
+    private final Action<BeerOrderStatusEnum, BeerOrderEventEnum>  validateOrderAction;
+    private final Action<BeerOrderStatusEnum, BeerOrderEventEnum>  allocateOrderAction;
 
     @Override
     public void configure(StateMachineStateConfigurer<BeerOrderStatusEnum, BeerOrderEventEnum> states)
@@ -52,7 +52,7 @@ public class BeerOrderStateMachineConfig extends StateMachineConfigurerAdapter<B
             .and().withExternal()
                 .source(BeerOrderStatusEnum.VALIDATED).target(BeerOrderStatusEnum.ALLOCATION_PENDING)
                 .event(BeerOrderEventEnum.ALLOCATE_ORDER)
-                .action(allocateOrderRequest);
+                .action(allocateOrderAction);
 
 
 
