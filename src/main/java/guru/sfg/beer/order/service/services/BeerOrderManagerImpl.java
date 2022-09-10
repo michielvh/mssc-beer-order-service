@@ -1,5 +1,6 @@
 package guru.sfg.beer.order.service.services;
 
+import java.util.UUID;
 import javax.transaction.Transactional;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;
@@ -39,6 +40,16 @@ private final     BeerOrderStateChangeInterceptor beerOrderStateChangeIntercepto
 
 
         return savedBeerOrder;
+    }
+
+    @Override
+    public void processValidationResult(UUID orderId, Boolean isValid) {
+        BeerOrder beerOrder = beerOrderRepository.getOne(orderId);
+        if (isValid){
+            sendBeerOrderEvent(beerOrder,BeerOrderEventEnum.VALIDATION_PASSED);
+        } else {
+            sendBeerOrderEvent(beerOrder,BeerOrderEventEnum.VALIDATION_FAILED);
+        }
     }
 
     private void sendBeerOrderEvent(BeerOrder beerOrder, BeerOrderEventEnum eventEnum){
