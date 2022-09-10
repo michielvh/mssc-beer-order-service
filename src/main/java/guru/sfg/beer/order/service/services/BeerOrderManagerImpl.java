@@ -47,6 +47,12 @@ private final     BeerOrderStateChangeInterceptor beerOrderStateChangeIntercepto
         BeerOrder beerOrder = beerOrderRepository.getOne(orderId);
         if (isValid){
             sendBeerOrderEvent(beerOrder,BeerOrderEventEnum.VALIDATION_PASSED);
+
+
+            BeerOrder validatedOrder = beerOrderRepository.findOneById(orderId);
+
+            sendBeerOrderEvent(validatedOrder, BeerOrderEventEnum.ALLOCATE_ORDER);
+
         } else {
             sendBeerOrderEvent(beerOrder,BeerOrderEventEnum.VALIDATION_FAILED);
         }
